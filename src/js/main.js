@@ -29,8 +29,15 @@
 	var img = $ ('img');
 
 	// Simple Tween
+	// Position the image to the center belong the top "Y"
+	// TweenLite.from(img, 3, {width: 50, x: 200, y: -200 } )
+	//  Add Scale Animation
+	// TweenLite.from(img, 1,{ opacity: 5, scale: 25 });
 
-	TweenLite.from(img, 1, {width: 100, x: 200, y: -200, opacity: 0 });
+	TweenLite.fromTo(img, 1, {x: -200},{x: 200});
+	//  Also 
+	TweenLite.set(img, {x: 200});
+
 
 	
 })(jQuery);
