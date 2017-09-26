@@ -25,9 +25,6 @@
 // 	TweenLite.to(secondItem, 1, { opacity: 0, x: 250});
 
 (function($) {
-	
-	var img = $ ('img');
-		h1 = $ ("h1");
 
 	// Simple Tween
 	// Position the image to the center belong the top "Y"
@@ -47,16 +44,23 @@
 	//  Also 
 	// TweenLite.set(img, {x: 400});
 
+		
+	var img = $ ('img');
+		h1 = $ ("h1");
+		intro = $(".intro"),  
+		list = $(".list");
+		// firstItem = $("li:first-child"),  
+		// secondItem = $("li:nth-child(2)"), 
+		// lastItem = $("li:last-child");  
 
-
-	TweenLite.from(img, 1, {x: -200, ease:Power2.easeOut} );
-	
-	TweenLite.from(h1, 2,{autoAlpha: 0});
+	TweenLite.from(h1, 1,{autoAlpha: 0});
+	TweenLite.from(img, 1, {x: -200, ease:Power2.easeOut} );	
 
 	// TweenLite.from(img, 1, {autoAlpha: 1} );
 	TweenLite.from(h1, 2,{x: 200});
 	
-
+	TweenLite.from(intro, 4, {autoAlpha: 0});
+	TweenLite.from(list, 3, {autoAlpha: 0});
 	
 })(jQuery);
 
