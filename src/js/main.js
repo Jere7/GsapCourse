@@ -2,12 +2,12 @@
 									//  Video 1     
 
     
-// 	var header = $('#header'),  // ('') 
-// 			h1 = $("h1"),  // ("")
-// 			intro = $(".intro"),  // ("")
-// 			firstItem = $("li:first-child"),  // ("")
-// 			secondItem = $("li:nth-child(2)"),  // ("")
-// 			lastItem = $("li:last-child");  // ("")
+// 	var header = $('#header'),  
+// 			h1 = $("h1"),  
+// 			intro = $(".intro"),  
+// 			firstItem = $("li:first-child"),  
+// 			secondItem = $("li:nth-child(2)"), 
+// 			lastItem = $("li:last-child");  
 	
 // 	// var header = document.getElementById('header'), 
 // 	// 	h1 = document.getElementsByTagName("h1"),
@@ -27,6 +27,7 @@
 (function($) {
 	
 	var img = $ ('img');
+		h1 = $ ("h1");
 
 	// Simple Tween
 	// Position the image to the center belong the top "Y"
@@ -34,16 +35,25 @@
 	//  Add Scale Animation
 	// TweenLite.from(img, 1,{ opacity: 5, scale: 25 });
 
-	// TweenLite.fromTo(img, 1, {x: -400},{x: 200});
-	// //  Also 
-	// TweenLite.set(img, {x: 400});
-	
 
 	// left to right began in the "x" position set
 	// TweenLite.from(img, 1, {x: -200});
 
 	// right to left finish in the "x" position set
-	TweenLite.to(img, 1, {x: -200});
+	// TweenLite.to(img, 1, {x: -200});
+	
+
+	// TweenLite.fromTo(img, 1, {x: -400},{x: 200});
+	//  Also 
+	// TweenLite.set(img, {x: 400});
+
+
+
+	TweenLite.from(img, 1, {x: -200} );
+	TweenLite.from(img, 1, {autoAlpha: 0} );
+	TweenLite.from(h1, 2,{x: 200});
+	TweenLite.from(h1, 2,{autoAlpha: 0});
+	
 
 	
 })(jQuery);
