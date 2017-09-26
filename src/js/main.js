@@ -1,6 +1,7 @@
 
 		// jQuery
-	
+// (function($) {			
+
 // 	var header = $('#header'),  
 // 			h1 = $("h1"),  
 // 			intro = $(".intro"),  
@@ -8,7 +9,7 @@
 // 			secondItem = $("li:nth-child(2)"), 
 // 			lastItem = $("li:last-child");  
 	
-		// JavaScript 
+		// JavaScript did not need a function declaration
 
 // 	// var header = document.getElementById('header'), 
 // 	// 	h1 = document.getElementsByTagName("h1"),
@@ -24,10 +25,6 @@
 // 	TweenLite.to(intro, 1, { opacity: 0, x: 250});
 // 	TweenLite.to(firstItem, 1, { opacity: 0, x: 250});
 // 	TweenLite.to(secondItem, 1, { opacity: 0, x: 250});
-
-
-
-(function($) {
 
 	// Simple Tween
 	// Position the image to the center belong the top "Y"
@@ -46,8 +43,9 @@
 	// TweenLite.fromTo(img, 1, {x: -400},{x: 200});
 	//  Also 
 	// TweenLite.set(img, {x: 400});
+})(jQuery);
 
-		
+(function($) {		
 	var img = $ ('img');
 		h1 = $ ("h1");
 		intro = $(".intro"),  
