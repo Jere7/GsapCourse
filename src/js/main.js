@@ -43,9 +43,10 @@
 	// TweenLite.fromTo(img, 1, {x: -400},{x: 200});
 	//  Also 
 	// TweenLite.set(img, {x: 400});
-})(jQuery);
+// })(jQuery);
 
 (function($) {		
+
 	var img = $ ('img');
 		h1 = $ ("h1");
 		intro = $(".intro"),  
