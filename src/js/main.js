@@ -49,10 +49,12 @@
 
 
 
-	TweenLite.from(img, 1, {x: -200} );
-	TweenLite.from(img, 1, {autoAlpha: 0} );
-	TweenLite.from(h1, 2,{x: 200});
+	TweenLite.from(img, 1, {x: -200, ease:Power2.easeOut} );
+	
 	TweenLite.from(h1, 2,{autoAlpha: 0});
+
+	// TweenLite.from(img, 1, {autoAlpha: 1} );
+	TweenLite.from(h1, 2,{x: 200});
 	
 
 	
