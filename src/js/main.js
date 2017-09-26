@@ -1,7 +1,6 @@
 
-									//  Video 1     
-
-    
+		// jQuery
+	
 // 	var header = $('#header'),  
 // 			h1 = $("h1"),  
 // 			intro = $(".intro"),  
@@ -9,6 +8,8 @@
 // 			secondItem = $("li:nth-child(2)"), 
 // 			lastItem = $("li:last-child");  
 	
+		// JavaScript 
+
 // 	// var header = document.getElementById('header'), 
 // 	// 	h1 = document.getElementsByTagName("h1"),
 // 	// 	intro = document.getElementsByClassName("intro"),
@@ -23,6 +24,8 @@
 // 	TweenLite.to(intro, 1, { opacity: 0, x: 250});
 // 	TweenLite.to(firstItem, 1, { opacity: 0, x: 250});
 // 	TweenLite.to(secondItem, 1, { opacity: 0, x: 250});
+
+
 
 (function($) {
 
