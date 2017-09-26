@@ -56,10 +56,17 @@
 		// lastItem = $("li:last-child");  
 
 	TweenLite.from(h1, 1,{autoAlpha: 0});
-	TweenLite.from(img, 1, {x: -200, ease:Power2.easeOut} );	
+	TweenLite.from(img, 1, {x: -200, ease:Power2.easeOut } );	
 
 	// TweenLite.from(img, 1, {autoAlpha: 1} );
-	TweenLite.from(h1, 2,{x: 200});
+
+	// DIFFERENCE BETWEEN META AND autoAlpha
+
+			// CHECH BOTH
+
+	// TweenLite.from(h1, 2,{autoAlpha: 2, x: 200, delay: 2});
+				// OR
+	TweenLite.to(h1, 2,{autoAlpha: 0, x: 200, delay: 2});
 	
 	TweenLite.from(intro, 4, {autoAlpha: 0});
 	TweenLite.from(list, 3, {autoAlpha: 0});
