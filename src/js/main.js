@@ -34,10 +34,16 @@
 	//  Add Scale Animation
 	// TweenLite.from(img, 1,{ opacity: 5, scale: 25 });
 
-	TweenLite.fromTo(img, 1, {x: -200},{x: 200});
-	//  Also 
-	TweenLite.set(img, {x: 200});
+	// TweenLite.fromTo(img, 1, {x: -400},{x: 200});
+	// //  Also 
+	// TweenLite.set(img, {x: 400});
+	
 
+	// left to right began in the "x" position set
+	// TweenLite.from(img, 1, {x: -200});
+
+	// right to left finish in the "x" position set
+	TweenLite.to(img, 1, {x: -200});
 
 	
 })(jQuery);
