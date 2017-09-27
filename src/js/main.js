@@ -61,21 +61,17 @@
 		ease:Power2.easeInOut
 	 });	
 
+	TweenLite.from(intro, 4, {autoAlpha: 0});
+	TweenLite.from(list, 3, {autoAlpha: 0
+	});
 
-	// DIFFERENCE BETWEEN META AND autoAlpha
-
-			// CHECH BOTH
-
-	TweenLite.from(h1, 2,{autoAlpha: 2, x: 0 , delay: 2});
-
-				// OR
-	TweenLite.from(intro, 4, {autoAlpha: 1});
-	TweenLite.from(list, 3, {autoAlpha: 1});
 	TweenLite.to(h1, 2,{autoAlpha: 0, x: 200, delay: 2, ease:Power2.easeOut,
 		onStart: onStart,
 		onUpdate: onUpdate,
 		onComplete: onComplete
 	});
+	
+	
 
 	 function onStart() {
 		 console.log("Animation Started");
@@ -97,10 +93,7 @@
 
 	// TweenLite.from(h1, 2,{autoAlpha: 2, x: 200 , delay: 2});
 				// OR
-	TweenLite.to(h1, 2,{autoAlpha: 0, x: 200, delay: 2, ease:Power2.easeOut});
 	
-	TweenLite.from(intro, 4, {autoAlpha: 0});
-	TweenLite.from(list, 3, {autoAlpha: 0});
 	
 }(jQuery));
 
