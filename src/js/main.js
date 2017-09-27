@@ -59,20 +59,17 @@
 	TweenLite.from(img, 1, {
 		x: -200,
 		ease:Power2.easeInOut
-	 });	
+	});	
 
-	TweenLite.from(intro, 4, {autoAlpha: 0});
-	TweenLite.from(list, 3, {autoAlpha: 0
-	});
+	TweenLite.from(intro, 4, {autoAlpha: 1});
+	TweenLite.from(list, 3, {autoAlpha: 0});
 
-	TweenLite.to(h1, 2,{autoAlpha: 0, x: 200, delay: 2, ease:Power2.easeOut,
+	TweenLite.to(h1, 2,{autoAlpha: 0, x: 200, delay: 2, ease:Power1.easeInOut,
 		onStart: onStart,
 		onUpdate: onUpdate,
 		onComplete: onComplete
 	});
 	
-	
-
 	 function onStart() {
 		 console.log("Animation Started");
 	 }
@@ -83,7 +80,7 @@
 
 	 function onComplete() {
 		 console.log("Animation Complete");
-	 }
+	 };
 
 	// TweenLite.from(img, 1, {autoAlpha: 1} );
 
