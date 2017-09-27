@@ -58,24 +58,36 @@
 	TweenLite.from(h1, 1,{autoAlpha: 0});
 	TweenLite.from(img, 1, {
 		x: -200,
-		ease:Power2.easeOut,
-		onStar: onStar,
+		ease:Power2.easeInOut
+	 });	
+
+
+	// DIFFERENCE BETWEEN META AND autoAlpha
+
+			// CHECH BOTH
+
+	TweenLite.from(h1, 2,{autoAlpha: 2, x: 0 , delay: 2});
+
+				// OR
+	TweenLite.from(intro, 4, {autoAlpha: 1});
+	TweenLite.from(list, 3, {autoAlpha: 1});
+	TweenLite.to(h1, 2,{autoAlpha: 0, x: 200, delay: 2, ease:Power2.easeOut,
+		onStart: onStart,
 		onUpdate: onUpdate,
 		onComplete: onComplete
-
-	 } );	
+	});
 
 	 function onStart() {
-		 console.log("Animation Started")
-	 };
+		 console.log("Animation Started");
+	 }
 
 	 function onUpdate() {
-		 console.log("Animation is in Progress!")
-	 };
+		 console.log("Animation is in Progress!");
+	 }
 
 	 function onComplete() {
-		 console.log("Animation Complete")
-	 };
+		 console.log("Animation Complete");
+	 }
 
 	// TweenLite.from(img, 1, {autoAlpha: 1} );
 
@@ -90,7 +102,7 @@
 	TweenLite.from(intro, 4, {autoAlpha: 0});
 	TweenLite.from(list, 3, {autoAlpha: 0});
 	
-})(jQuery);
+}(jQuery));
 
 				
 
