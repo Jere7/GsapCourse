@@ -49,8 +49,11 @@
 
 	var img = $ ('img');
 		h1 = $ ("h1");
-		intro = $(".intro"),  
+		intro = $(".intro");  
 		list = $(".list");
+		h2 = $("h2");
+		i = 0;
+
 		// firstItem = $("li:first-child"),  
 		// secondItem = $("li:nth-child(2)"), 
 		// lastItem = $("li:last-child");  
@@ -75,12 +78,13 @@
 	 }
 
 	 function onUpdate() {
-		 console.log("Animation is in Progress!");
+		//  console.log("Animation is in Progress!");
+		h2.text(i++);
 	 }
 
 	 function onComplete() {
 		 console.log("Animation Complete");
-	 };
+	 }
 
 	// TweenLite.from(img, 1, {autoAlpha: 1} );
 
