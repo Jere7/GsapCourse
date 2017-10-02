@@ -109,11 +109,25 @@
 				
 
 			tl
-				  .from(intro, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
-				  .from(h1, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut },'-=0.15')
-				  .from(img, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut },'-=0.15')
-				  .from(h2, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut },'-=0.15')
-				  .from(list, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut },'-=0.15');
+				  .from(h1, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
+
+						//   Form to add a labels name 
+
+				  .add('intro')
+
+				  		//  Relative position in a TimelineLite ( '-=0.0' or '+=0.0' )
+
+				  .from(intro, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut }, '-=0.15')
+
+						// Absolute position in a TimelineLite
+
+				  .from(img, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut }, '-=0.15')
+
+						//  Added labels
+
+				  .from(h2, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut }, 'intro')
+
+				  .from(list, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut });
 
 						
 }(jQuery));
