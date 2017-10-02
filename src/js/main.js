@@ -92,11 +92,11 @@
 
 			// CHECH BOTH
 
-// EXAMPLE BELOW WITH A SIMPLE TWEEN 
+// EXAMPLE BELOW WITH A SIMPLE TweenLite 
 	// TweenLite.from(h1, 2,{autoAlpha: 2, x: 200 , delay: 2});
 
 
-// EXAMPLE FOR TIMELINELITE.MIN.JS CDNJS
+// Example with TimelineLite.min.js cdnjs
 
 	(function($) {		
 		
@@ -109,11 +109,11 @@
 				
 
 			tl
-				  .from(h2, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
-				  .from(h1, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
 				  .from(intro, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
-				  .from(list, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
-				  .from(img, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut });
+				  .from(h1, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut },'-=0.15')
+				  .from(img, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut },'-=0.15')
+				  .from(h2, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut },'-=0.15')
+				  .from(list, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut },'-=0.15');
 
 						
 }(jQuery));
