@@ -45,46 +45,46 @@
 	// TweenLite.set(img, {x: 400});
 // })(jQuery);
 
-(function($) {		
+// (function($) {		
 
-	var img = $ ('img');
-		h1 = $ ("h1");
-		intro = $(".intro");  
-		list = $(".list");
-		h2 = $("h2");
-		i = 0;
+// 	var img = $ ('img');
+// 		h1 = $ ("h1");
+// 		intro = $(".intro");  
+// 		list = $(".list");
+// 		h2 = $("h2");
+// 		i = 0;
 
 		// firstItem = $("li:first-child"),  
 		// secondItem = $("li:nth-child(2)"), 
 		// lastItem = $("li:last-child");  
 
-	TweenLite.from(h1, 1,{autoAlpha: 0});
-	TweenLite.from(img, 1, {
-		x: -200,
-		ease:Power2.easeInOut
-	});	
+	// TweenLite.from(h1, 1,{autoAlpha: 0});
+	// TweenLite.from(img, 1, {
+	// 	x: -200,
+	// 	ease:Power2.easeInOut
+	// });	
 
-	TweenLite.from(intro, 4, {autoAlpha: 1});
-	TweenLite.from(list, 3, {autoAlpha: 0});
+	// TweenLite.from(intro, 4, {autoAlpha: 1});
+	// TweenLite.from(list, 3, {autoAlpha: 0});
 
-	TweenLite.to(h1, 2,{autoAlpha: 0, x: 200, delay: 2, ease:Power1.easeInOut,
-		onStart: onStart,
-		onUpdate: onUpdate,
-		onComplete: onComplete
-	});
+	// TweenLite.to(h1, 2,{autoAlpha: 0, x: 200, delay: 2, ease:Power1.easeInOut,
+	// 	onStart: onStart,
+	// 	onUpdate: onUpdate,
+	// 	onComplete: onComplete
+	// });
 	
-	 function onStart() {
-		 console.log("Animation Started");
-	 }
+	//  function onStart() {
+	// 	 console.log("Animation Started");
+	//  }
 
-	 function onUpdate() {
-		//  console.log("Animation is in Progress!");
-		h2.text(i++);
-	 }
+	//  function onUpdate() {
+	// 	//  console.log("Animation is in Progress!");
+	// 	h2.text(i++);
+	//  }
 
-	 function onComplete() {
-		 console.log("Animation Complete");
-	 }
+	//  function onComplete() {
+	// 	 console.log("Animation Complete");
+	//  }
 
 	// TweenLite.from(img, 1, {autoAlpha: 1} );
 
@@ -92,12 +92,34 @@
 
 			// CHECH BOTH
 
+// EXAMPLE BELOW WITH A SIMPLE TWEEN 
 	// TweenLite.from(h1, 2,{autoAlpha: 2, x: 200 , delay: 2});
-				// OR
-	
-	
+
+
+// EXAMPLE FOR TIMELINELITE.MIN.JS CDNJS
+
+	(function($) {		
+		
+			var img = $ ("img"),
+				h1 = $ ("h1"),
+				intro = $(".intro"),  
+				list = $(".list"),
+				h2 = $("h2"),
+				tl = new TimelineLite();
+				
+
+			tl
+				  .from(h2, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
+				  .from(h1, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
+				  .from(intro, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
+				  .from(list, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
+				  .from(img, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut });
+
+						
 }(jQuery));
 
+	
+	
 				
 
 
