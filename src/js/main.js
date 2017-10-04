@@ -129,7 +129,11 @@
 
 				  .from(list, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut });
 
-						
+				tl.pause();
+
+				$('#btnPlay').on('click', function(){
+					tl.play();
+				})				
 }(jQuery));
 
 	

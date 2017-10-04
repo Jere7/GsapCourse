@@ -53,7 +53,7 @@ textarea {
 
 
 /* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   
    ========================================================================== */
 
 $green: #76c897;
@@ -149,20 +149,17 @@ h2 {
    Author's custom styles
    ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.buttons {
+    background: red; 
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    button {
+        width: 140px;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -290,3 +287,6 @@ h2 {
         page-break-after: avoid;
     }
 }
+
+
+
