@@ -109,7 +109,7 @@
 				
 
 			tl
-				  .from(h1, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
+				  .from(h1, 1, { y: -15, autoAlpha: 0, ease:Power1.easeOut })
 
 						//   Form to add a labels name 
 
@@ -117,23 +117,50 @@
 
 				  		//  Relative position in a TimelineLite ( '-=0.0' or '+=0.0' )
 
-				  .from(intro, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut }, '-=0.15')
+				  .from(intro, 1, { y: -15, autoAlpha: 0, ease:Power1.easeOut }, '-=0.15')
 
 						// Absolute position in a TimelineLite
 
-				  .from(img, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut }, '-=0.15')
+				  .from(img, 1, { y: -15, autoAlpha: 0, ease:Power1.easeOut }, '-=0.15')
 
 						//  Added labels
 
-				  .from(h2, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut }, 'intro')
+				  .from(h2, 1, { y: -15, autoAlpha: 0, ease:Power1.easeOut }, 'intro')
 
-				  .from(list, .3, { y: -15, autoAlpha: 0, ease:Power1.easeOut });
+				  .from(list, 1, { y: -15, autoAlpha: 0, ease:Power1.easeOut });
 
 				tl.pause();
 
 				$('#btnPlay').on('click', function(){
 					tl.play();
 				})				
+
+				$('#btnPause').on('click', function(){
+					tl.pause();
+				})
+
+				$('#btnResume').on('click',function(){
+					tl.resume();
+				})
+				$('#btnReverse').on('click', function(){
+					tl.reverse();
+				})
+				$('#btnSpeedUp').on('click',function(){
+					tl.timeScale(8);
+				})
+				$('#btnSlowDown').on('click', function(){
+					tl.timeScale(0.5);
+				})
+				$('#btnSeek').on('click', function(){
+					tl.seek(1);
+				})
+				$('#btnProgress').on('click', function(){
+					tl.progress(0.5);
+				})
+				$('#btnRestart').on('click', function(){
+					tl.restart();
+				})
+
 }(jQuery));
 
 	
